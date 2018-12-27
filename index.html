@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>vae</title>
+	<link rel="shortcut icon" href="">
+	<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-autocomplete/1.0.7/jquery.auto-complete.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-autocomplete/1.0.7/jquery.auto-complete.js"></script>
+</head>
+<style>
+html, body {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+canvas {
+    user-select: none;
+}
+img {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+}
+</style>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-3">
+            <h3>Concept 1:</h3>
+            <input id="c1-autocomplete">
+            <img id="c1-img" src="https://via.placeholder.com/300x300"></img>
+            <img id="c1-reconstr" src="https://via.placeholder.com/300x300"></img>
+        </div>
+        <div class="col-xs-6">
+            <h3>Training Encodings (PCA 300->2):</h3>
+            <canvas id="plot" width="400px" height="400px"></canvas>
+        </div>
+        <div class="col-xs-3">
+            <h3>Concept 2:</h3>
+            <input id="c2-autocomplete">
+            <img id="c2-img" src="https://via.placeholder.com/300x300"></img>
+            <img id="c2-reconstr" src="https://via.placeholder.com/300x300"></img>
+        </div>
+    </div>
+</div>
+</body>
+<script src="index.js"></script>
+</html>
